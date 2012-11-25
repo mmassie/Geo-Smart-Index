@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>THE INTERACTIVE PROJECT</title>
+<meta name="description" content="Demo site for location changing homepage" />
+<meta name="keywords" content="location, interactive, Massie" />
+<meta name="viewport" content="width=500" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<script src="js/modernizr.custom.21881.js"></script>
+
+
+<script type="text/javascript">
+  navigator.geolocation.getCurrentPosition(showPosition);
+
+  function showPosition(position) {
+  if (position.coords.latitude === 43.0402778 && position.coords.longitude === -87.8972222) { //GPS = Milwauke Art Museum
+  window.open("local.html","_self"); //Redirect to a welcome page for onsite visitors
+  } else {
+  window.open("yay.html","_self"); //Stays on normal homepage - Making page not-'index.html' just for testing
+  }
+}
+  function errorCallback(error) {
+    switch(error.code) {
+      case error.TIMEOUT:
+        // Quick fallback when no cached position exists at all.
+        doFallback();
+        // Acquire a new position object.
+        navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+        break;};
+  }
+  </script>
+
+</head>
+<body>
+
+  <h1>Hello!</h1>
+  <p>Welcome to a demo page for building a location based homepage. This site uses the <a class="map" href="http://maps.google.com/maps?oe=utf-8&rls=org.mozilla:en-US:official&client=firefox-a&um=1&ie=UTF-8&q=milwaukee+art+museum&fb=1&gl=us&hq=milwaukee+art+museum&cid=0,0,16056203038063993501&sa=X&ei=JlOoUJ3DHurcyQH-y4CwDw&ved=0CJwBEPwSMAA">Milwaukee Art Museum</a> as it's home - The site will appear different for people accessing at that location versus anywhere else.</p>
+
+</body>
+</html>
