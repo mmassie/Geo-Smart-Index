@@ -1,16 +1,41 @@
 README.MD
 
-This is a javascript applet to recognize the location of the browser and change the webpage.
+geoSmartIndex.js v0.01
+by Mike Massie (hello@michaelmassie.com)
 
-The idea is to build location awareness into public sites. If an end user is standing in a store or museum, the webpage should be able to identify that and offer them content more relavent to their need.
+This is a javascript applet to recognize the location of the browser and change the webpage
+
+--
+
+Overview:
+
+The idea is to build location awareness into public sites. If an end user is standing in a store, event or museum, the webpage should be able to identify that and offer them content more relavent to their need.
 
 This is:
 a) My first JavaScript app
 b) My first public Git repo
 
-So be gentle!
+So be gentle! :)
+
+--
+
+Current Status:
+
+* Early Beta with some conditional checking yet not validated.
+* Fallback JS has yet to be tested
+
+--
+
+To-Do:
+
+* Validate failover
+* Make sure tolerance has acceptable distance to fence location
+* Accept geo cached coordinates within ~1 min
+
+--
 
 Background:
+
 This attempt is to build geo intelligence into web pages that can benefit the user by giving them different content when they are at a specific location.
 
 There was a map counter at our local park that had a pin on it that said “You are here”. When we walked out the door and headed towards the trail, the paper map didn’t update. More of us are walking around with smartphones, so why not lower the burden on handouts, fliers and maps at the entrance and potentially just point people with these devices to the sites homepage and let technology handle the rest.
